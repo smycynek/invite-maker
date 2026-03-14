@@ -18,6 +18,8 @@ src/res/film1.json
 src/res/film2.json
 src/res/general.json 
 
+sitevars.sh
+
 invite/
 invite.zip
 invite.html
