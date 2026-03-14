@@ -15,7 +15,6 @@ This is what I came up with.
 
 Uses `bun`, but `npm` should also work.  Build with Node v22.
 
-![Rendered website](./example.png)
 ![Rendered website](./example2.jpg)
 
 ## Setup
