@@ -1,0 +1,48 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "./standard.sh && vite",
+    "dev": "./standard.sh && vite",
+    "build": "./standard.sh && vite build --base=/invite/",
+    "serve": "vite preview",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "update_dates": "node update_dates.mjs",
+    "side_by_side": "node side_by_side.mjs",
+    "list_films": "node list_films.mjs",
+    "make_text": "./standard.sh && node build_text.mjs",
+    "screenshot": "./standard.sh && node screenshot.mjs",
+    "clean": "rm -f invite.txt invite.jpg invite.zip invitation.jpg public/*.jpg public/preview.png src/res/film1.json src/res/film2.json src/res/date-time.json src/res/general.json && rm -rf invite"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/bootstrap": "^5.2.10",
+    "@types/node": "^25.3.5",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-solid": "^0.14.5",
+    "prettier": "^3.8.1",
+    "sass": "^1.81.0",
+    "solid-devtools": "^0.34.3",
+    "typescript": "^5.7.2",
+    "vite": "^7.1.4",
+    "vite-plugin-solid": "^2.11.8"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@solidjs/router": "^0.15.4",
+    "bootstrap": "^5.3.3",
+    "globals": "^17.4.0",
+    "puppeteer": "^24.38.0",
+    "sharp": "^0.34.5",
+    "solid-js": "^1.9.5"
+  }
+}

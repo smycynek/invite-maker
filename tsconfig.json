@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    // General
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "target": "es6",
+
+    // Modules
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "module": "es6",
+    "moduleResolution": "bundler",
+
+    // Type Checking & Safety
+    "strict": true,
+    "types": ["vite/client"]
+  }
+}
