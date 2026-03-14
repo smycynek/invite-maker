@@ -7,15 +7,19 @@ I wanted a fun project for creating movie-night party invitations, since I host 
 I needed:
 
 * Something that looked good on mobile and desktop.
-* Something that could be made into a single image/screenshot easily
+* Something that could be made into a single image/screenshot easily, so I could send a URL or an image as needed.
 * Something that could also render everything as plain text.
-* Something easily customizable
+* Something with customizable content
 
 This is what I came up with.
 
 Uses `bun`, but `npm` should also work.  Build with Node v22.
 
+Rendered page
 ![Rendered website](./example2.jpg)
+
+Text message previews of the URL look great, too!
+![Text msg preview](textmsg.jpg)
 
 ## Setup
 
