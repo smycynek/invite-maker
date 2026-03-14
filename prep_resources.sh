@@ -1,12 +1,12 @@
-USAGE="USAGE:./prep_resources.sh <film1> <film2>   Example: ./prep_resources.sh burbs shrunk    Also see bun run list_films"
+USAGE="USAGE:./prep_resources.sh <film1> <film2> \n  Example: ./prep_resources.sh burbs shrunk \n   Also see 'bun run list_films'"
 
 if [ -z "$1" ]; then
-    echo "no film1" $USAGE
+    echo "no film1\n" $USAGE
     exit 4
 fi
 
 if [ -z "$2" ]; then
-    echo "no film2" $USAGE
+    echo "no film2\n" $USAGE
     exit 4
 fi
 

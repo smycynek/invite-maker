@@ -16,7 +16,9 @@
     "list_films": "node list_films.mjs",
     "make_text": "./standard.sh && node build_text.mjs",
     "screenshot": "./standard.sh && node screenshot.mjs",
-    "clean": "rm -f invite.txt invite.jpg invite.zip invitation.jpg public/*.jpg public/preview.png src/res/film1.json src/res/film2.json src/res/date-time.json src/res/general.json && rm -rf invite"
+    "clean": "rm -f invite.txt invite.jpg invite.zip invitation.jpg public/*.jpg public/preview.png src/res/film1.json src/res/film2.json src/res/date-time.json src/res/general.json && rm -rf invite",
+    "prep_resources": "./prep_resources.sh",
+    "deploy": "./deploy.sh"
   },
   "license": "MIT",
   "devDependencies": {

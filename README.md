@@ -13,32 +13,27 @@ I needed:
 
 This is what I came up with.
 
-A SolidJS + Vite app for generating movie night invitations, served at `/invite/`. Content is driven by JSON data files in `src/res/` and `res/`, making it easy to swap films and dates without touching code.
-
+Uses `bun`, but `npm` should also work.  Build with Node v22.
 
 ![Rendered website](./example.png)
-
-## Project structure
-
-- `src/res/general.json` — static strings (title, address, food, rsvp, etc.)
-- `src/res/date-time.json` — event date and showtimes
-- `src/res/film1.json` / `film2.json` — the two active films (point to entries in `res/`)
-- `res/*.json` — library of all available films
-- `public/` — static assets (poster images, preview.png)
+![Rendered website](./example2.jpg)
 
 ## Setup
 
-```bash
 
-bun install
 
-edit invitedata/date-time.json and invitedata/general.json as needed.
+`bun install`
 
-You can also add/edit the images and film data in filmdata
+edit `invitedata/date-time.json` and `invitedata/general.json` as needed.
 
-bun list_films
+You can also add/edit the images and film data in `filmdata`
+
+`bun list_films`
+
 
 (output...)
+
+```
 Title                                         Key
 -------------------------------------------------------
 AKEELAH AND THE BEE                           akeelah
@@ -47,23 +42,23 @@ SO I MARRIED AN AXE MURDERER                  axe
 THE 'BURBS                                    burbs
 HONEY, I SHRUNK THE KIDS                      shrunk
 ....contents of filmdata directory
-
 ```
+
 (Choose two films)
 ```bash
-./prep_resources.sh film1 film2
+bun run prep_resources film1 film2
 
 e.g.
 
-./prep_resources.sh burbs shrunk
+bun run prep_resources burbs shrunk
 ```
 
-`prep_resources.sh` will copy image and text resources to the build directory and generate a preview image
+`prep_resources` will copy image and text resources to a target directory and generate a preview image
 suitable for mobile url previews as well as the TV banner image.  It will also update index.html metadata.
 
 To run: `bun run dev` or `bun run build`
 
-See `deploy.sh` to post to a public website via scp and ssh 
+See `bun run deploy` to post to a public website via scp and ssh
 
 
 ## Other options
@@ -81,7 +76,4 @@ preview image.
 
 `invite/#/banner` -- Shows a simplified widescreen page suitable for showing on a TV.
 The project compiles to older Ecmascript standards, as most TVs don't support a lot of modern HTML/JS.
-
-
-4. Run `deploy.sh <filmkey1> <filmkey2>` to configure and post to website
 
