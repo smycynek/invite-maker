@@ -11,7 +11,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
-    "update_dates": "node update_dates.mjs",
+    "update_index": "node update_index.mjs",
     "side_by_side": "node side_by_side.mjs",
     "list_films": "node list_films.mjs",
     "make_text": "./standard.sh && node build_text.mjs",

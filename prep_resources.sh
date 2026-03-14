@@ -21,5 +21,5 @@ cp ./filmdata/$2.json ./src/res/film2.json
 cp ./invitedata/general.json ./src/res/general.json
 cp ./invitedata/date-time.json ./src/res/date-time.json
 
-bun run update_dates
+bun run update_index
 bun run side_by_side
