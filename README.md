@@ -20,6 +20,10 @@ A SolidJS + Vite app for generating movie night invitations, served at `/invite/
 
 bun install
 
+edit invitedata/date-time.json and invitedata/general.json as needed.
+
+You can also add/edit the images and film data in filmdata
+
 bun list_films
 
 (output...)
@@ -41,7 +45,7 @@ e.g.
 ```
 
 `prep_resources.sh` will copy image and text resources to the build directory and generate a preview image
-suitable for mobile url previews as well as the TV banner image.
+suitable for mobile url previews as well as the TV banner image.  It will also update index.html metadata.
 
 To run: `bun run dev` or `bun run build`
 
