@@ -2,6 +2,10 @@
 
 A SolidJS + Vite app for generating movie night invitations, served at `/invite/`. Content is driven by JSON data files in `src/res/` and `res/`, making it easy to swap films and dates without touching code.
 
+
+
+![Rendered website](./example.png)
+
 ## Project structure
 
 - `src/res/general.json` — static strings (title, address, food, rsvp, etc.)
@@ -45,7 +49,8 @@ To run: `bun run dev` or `bun run build`
 
 ## Other options
 
-1. Run `bun run make_text` to generate an optional plain text summary and small preview image.
+1. Run `bun run make_text` to generate an optional plain text summary and small 
+preview image.
 2. Run `bun run screenshot` to create an image of the static site (site must be running locally already)
 3. Run `deploy.sh <filmkey1> <filmkey2>` to configure and post to website
 
