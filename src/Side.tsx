@@ -46,6 +46,13 @@ const Side: Component = () => {
         </div>
         <hr />
         <p class="bold">{generalData.closing}</p>
+        <hr />
+        <p class="credits">
+          Built with{' '}
+          <a href="https://github.com/smycynek/invite-maker">
+            https://github.com/smycynek/invite-maker
+          </a>
+        </p>
       </div>
     </>
   );
