@@ -73,7 +73,7 @@ suitable for mobile url previews as well as the TV banner image.  It will also u
 
 To run: `bun run dev` or `bun run build`
 
-See `bun run deploy` to post to a public website via scp and ssh
+See `bun run deploy` to post to a public website via scp and ssh -- see `scripts/sitevars.sh`
 
 
 ## Other options

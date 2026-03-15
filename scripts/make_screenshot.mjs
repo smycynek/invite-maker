@@ -12,6 +12,7 @@ if (arg !== 'standard' && arg !== 'side') {
   arg = 'standard'
 }
 
+console.log('Note usage: \n bun run make_screenshot [standard|side] (default: standard)');
 console.log(`Generating screenshot for ${arg} view...`);
 
 const BASE   = 'http://localhost:3000/invite/';
