@@ -1,6 +1,6 @@
 #! /bin/bash
 
-VARS=./sitevars.sh # user-supplied vars for SITE, APP, and FOLDER
+VARS=./scripts/sitevars.sh # user-supplied vars for SITE, APP, and FOLDER
 
 USAGE="./deploy.sh <key1> <key2>"
 EXAMPLE="./deploy.sh wargames leap"
@@ -49,7 +49,7 @@ for tool in "${tools[@]}"; do
     fi
 done
 
-./prep_resources.sh "$1" "$2"
+./scripts/prep_resources.sh "$1" "$2"
 
 rm -rf dist # Remove old build
 rm -rf "$APP"

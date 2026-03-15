@@ -31,7 +31,10 @@ invitedata/date-time-myc.json
 invitedata/general-myc.json
 prep_myc.sh
 
-.venv/
+scripts/prep_myc.sh
+scripts/sitevars.sh
+
+
 # Runtime data
 pids
 *.pid
