@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./standard.sh && vite",
     "dev": "./standard.sh && vite",
-    "build": "./standard.sh && vite build --base=/invite/",
+    "build": "./standard.sh && vite build",
     "serve": "vite preview",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",

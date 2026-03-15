@@ -2,8 +2,9 @@
 
 VARS=./sitevars.sh # user-supplied vars for SITE, APP, and FOLDER
 
-usage="./deploy.sh key1 key2, e.g. ./deploy.sh wargames leap"
-usage2="also see listfilms"
+USAGE="./deploy.sh <key1> <key2>"
+EXAMPLE="./deploy.sh wargames leap"
+SEE_ALSO="also see 'bun run list_films'"
 
 if [ ! -f "$VARS" ]; then
    echo "You must supply app environment variables in $VARS to deploy"
@@ -27,16 +28,12 @@ fi
 
 
 if [ -z "$1" ]; then
-    echo "no film 1 key specified"
-    echo $usage
-    echo $usage2
+    printf "no film 1 key specified \n %s \n %s \n %s\n" "$USAGE" "$EXAMPLE" "$SEE_ALSO"
     exit 4
 fi
 
 if [ -z "$2" ]; then
-    echo "no film 2 key specified"
-    echo $usage
-    echo $usage2
+    printf "no film 2 key specified \n %s \n %s \n %s\n" "$USAGE" "$EXAMPLE" "$SEE_ALSO"
     exit 4
 fi
 
@@ -52,13 +49,11 @@ for tool in "${tools[@]}"; do
     fi
 done
 
+./prep_resources.sh "$1" "$2"
+
 rm -rf dist # Remove old build
-rm -rf $APP
+rm -rf "$APP"
 rm "$APP.zip"
-
-
-./prep_resources.sh $1 $2
-
 
 bun run build
 

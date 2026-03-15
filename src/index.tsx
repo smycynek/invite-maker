@@ -5,7 +5,7 @@ import { HashRouter, Route } from '@solidjs/router';
 import 'solid-devtools';
 import './bootstrap.min.css';
 import './styles.css';
-
+import './fontandcolor.css';
 import App from './App';
 import Banner from './Banner';
 import Side from './Side';
