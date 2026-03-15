@@ -18,19 +18,19 @@ This is what I came up with.
 
 Rendered page
 
-![Rendered website](./example2.jpg)
+![Rendered website](./previews/example2.jpg)
 
 
 
 TV banner
 
-![Rendered banner](./tv.jpg)
+![Rendered banner](./previews/tv.jpg)
 
 
 
 Text message previews of the URL look great, too!
 
-![Text msg preview](textmsg.jpg)
+![Text msg preview](./previews/textmsg.jpg)
 
 ## Setup
 
@@ -38,11 +38,13 @@ Uses `bun`, but `npm` should also work.  Built with Node v22, SolidJS, and Vite
 
 `bun install`
 
-edit `invitedata/date-time.json` and `invitedata/general.json` as needed.
+Edit `invitedata/date-time.json` and `invitedata/general.json` as needed.
 
-You can also add/edit the images and film data in `filmdata`
+Also see `fontandcolor.css` for other easy tweaks.
 
-`bun list_films`
+You can also add/edit the images and film data in the `filmdata` directory
+
+`bun run list_films`
 
 (output...)
 
@@ -78,7 +80,7 @@ See `bun run deploy` to post to a public website via scp and ssh
 
 1. Run `bun run make_text` to generate an optional plain text summary and small 
 preview image.
-2. Run `bun run screenshot` to create an image of the static site (site must be running locally already)
+2. Run `bun run make_screenshot` to create an image of the static site (site must be running locally already)
 
 
 ## Endpoints

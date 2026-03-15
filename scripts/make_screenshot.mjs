@@ -2,12 +2,20 @@
 // Renders the /invite/ page in a headless browser and saves a full-page
 // JPEG screenshot to invitation.jpg.
 //
-// Usage: bun run screenshot
+// Usage: bun run make_screenshot [standard|side]  (default: standard)
 // Requires the dev server to be running (bun run dev)
 
 import puppeteer from 'puppeteer';
 
-const URL    = 'http://localhost:3000/invite/#/side';
+let arg = process.argv[2] ?? 'standard';
+if (arg !== 'standard' && arg !== 'side') {
+  arg = 'standard'
+}
+
+console.log(`Generating screenshot for ${arg} view...`);
+
+const BASE   = 'http://localhost:3000/invite/';
+const URL    = arg === 'side' ? `${BASE}#/side` : BASE;
 const OUTPUT = 'invitation.jpg';
 
 const browser = await puppeteer.launch();
