@@ -16,7 +16,7 @@
     "list_films": "node scripts/list_films.mjs",
     "make_text": "./scripts/standard.sh && node scripts/make_text.mjs",
     "make_screenshot": "./scripts/standard.sh && node scripts/make_screenshot.mjs",
-    "clean": "rm -f invite.txt invite.jpg invite.zip invitation.jpg public/*.jpg public/preview.png src/res/film1.json src/res/film2.json src/res/date-time.json src/res/general.json && rm -rf invite",
+    "clean": "./scripts/clean.sh",
     "prep_resources": "./scripts/prep_resources.sh",
     "deploy": "./scripts/deploy.sh"
   },
