@@ -9,3 +9,4 @@ git checkout invitedata/general.json
 git checkout invitedata/date-time.json
 git checkout index.html
 git checkout src/fontandcolor.css
+git checkout vite.config.ts
