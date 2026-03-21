@@ -69,7 +69,7 @@ bun run prep_resources burbs shrunk
 ```
 
 `prep_resources` will copy image and text resources to a target directory and generate a preview image
-suitable for mobile url previews as well as the TV banner image.  It will also update index.html metadata.
+suitable for mobile url previews as well as the TV banner image.  It will also update index.html metadata and build and deploy metadata, such as your website url and path from `general.json`
 
 To run: `bun run dev` or `bun run build`
 
@@ -81,7 +81,7 @@ This project is a bit of a Frankenstein, as some options are configured through 
 
 1. Run `bun run make_text` to generate an optional plain text summary and small 
 preview image.
-2. Run `bun run make_screenshot` to create an image of the static site (site must be running locally already)
+2. Run `bun run make_screenshot <standard | side | banner>` to create an image of the static site (site must be running locally already)
 
 
 ## Endpoints

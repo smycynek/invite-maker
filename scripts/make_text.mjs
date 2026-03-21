@@ -57,7 +57,7 @@ const text = [
   hr,
   g.closing,
   hr,
-  `See full invitation at ${g.website}`,
+  `See full invitation at ${g.website}/${g.website_path}`,
 ].join('\n') + '\n';
 
 writeFileSync('invite.txt', text, 'utf8');

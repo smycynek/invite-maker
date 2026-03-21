@@ -13,7 +13,9 @@ const SITEVARS            = 'scripts/sitevars.sh';
 
 for (const p of [DATE_TIME_JSON, GENERAL_JSON, INVITEDATA_GENERAL, INDEX_HTML, VITE_CONFIG, SITEVARS]) {
   if (!existsSync(p)) {
+    // eslint-disable-next-line no-undef
     console.error(`Error: ${p} not found (run from the project root)`);
+    // eslint-disable-next-line no-undef
     process.exit(1);
   }
 }
@@ -23,7 +25,9 @@ const { website, website_path } = JSON.parse(readFileSync(GENERAL_JSON,   'utf8'
 const { website_path: vite_base } = JSON.parse(readFileSync(INVITEDATA_GENERAL, 'utf8'));
 const newTitle    = `Movie Night Invitation: ${date}`;
 
+// eslint-disable-next-line no-undef
 console.log(`Setting title to: "${newTitle}"`);
+// eslint-disable-next-line no-undef
 console.log(`Setting website to: "${website}/${website_path}"`);
 
 const original = readFileSync(INDEX_HTML, 'utf8');
@@ -38,20 +42,25 @@ let updated = original
   .replace(/(<link\s+rel="apple-touch-icon"\s+href=")[^"]*(")/,     `$1${website}/${website_path}/preview.png$2`);
 
 if (updated === original) {
+  // eslint-disable-next-line no-undef
   console.log('No changes needed — index.html already up to date.');
 } else {
   writeFileSync(INDEX_HTML, updated, 'utf8');
+  // eslint-disable-next-line no-undef
   console.log('index.html updated.');
 }
 
 const viteOriginal = readFileSync(VITE_CONFIG, 'utf8');
 const viteUpdated  = viteOriginal.replace(/(base:\s*')[^']*(')/,  `$1/${vite_base}/$2`);
 
+// eslint-disable-next-line no-undef
 console.log(`Setting vite base to: "/${vite_base}/"`);
 if (viteUpdated === viteOriginal) {
+  // eslint-disable-next-line no-undef
   console.log('No changes needed — vite.config.ts already up to date.');
 } else {
   writeFileSync(VITE_CONFIG, viteUpdated, 'utf8');
+  // eslint-disable-next-line no-undef
   console.log('vite.config.ts updated.');
 }
 
@@ -59,11 +68,13 @@ const sitevarsOriginal = readFileSync(SITEVARS, 'utf8');
 const sitevarsUpdated  = sitevarsOriginal
   .replace(/(export APP=).*/,    `$1${vite_base}`)
   .replace(/(export FOLDER=).*/, `$1${vite_base}`);
-
+// eslint-disable-next-line no-undef
 console.log(`Setting APP and FOLDER to: "${vite_base}"`);
 if (sitevarsUpdated === sitevarsOriginal) {
+  // eslint-disable-next-line no-undef
   console.log('No changes needed — scripts/sitevars.sh already up to date.');
 } else {
   writeFileSync(SITEVARS, sitevarsUpdated, 'utf8');
+  // eslint-disable-next-line no-undef
   console.log('scripts/sitevars.sh updated.');
 }
