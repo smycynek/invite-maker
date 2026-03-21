@@ -26,14 +26,8 @@ invite.txt
 invite.jpg
 invitation.jpg
 
-invitedata/date-time-myc.json
-invitedata/general-myc.json
-prep_myc.sh
 
-scripts/prep_myc.sh
-scripts/sitevars_myc.sh
-
-invitedata/general-steelmag.json
+custom/*
 
 # Runtime data
 pids
