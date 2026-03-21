@@ -1,8 +1,11 @@
 import type { Component } from 'solid-js';
+import { Show } from 'solid-js';
 import generalData from './res/general.json';
 import dateTimeData from './res/date-time.json';
 import film1Data from './res/film1.json';
 import film2Data from './res/film2.json';
+
+const sameFilm = JSON.stringify(film1Data) === JSON.stringify(film2Data);
 
 const Side: Component = () => {
   return (
@@ -37,12 +40,14 @@ const Side: Component = () => {
             <p>{film1Data.desc}</p>
             <img class="poster" src={film1Data.filename} alt={film1Data.title} />
           </div>
-          <div style={{ flex: '1', 'align-self': 'flex-start' }}>
-            <h4>{generalData.kids}</h4>
-            <h1 style={{ 'font-size': '1rem' }}>{film2Data.title}</h1>
-            <p>{film2Data.desc}</p>
-            <img class="poster" src={film2Data.filename} alt={film2Data.title} />
-          </div>
+          <Show when={!sameFilm}>
+            <div style={{ flex: '1', 'align-self': 'flex-start' }}>
+              <h4>{generalData.kids}</h4>
+              <h1 style={{ 'font-size': '1rem' }}>{film2Data.title}</h1>
+              <p>{film2Data.desc}</p>
+              <img class="poster" src={film2Data.filename} alt={film2Data.title} />
+            </div>
+          </Show>
         </div>
         <hr />
         <p class="bold">{generalData.closing}</p>

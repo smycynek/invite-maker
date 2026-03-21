@@ -22,12 +22,17 @@ const films = readdirSync(RES_DIR)
   });
 
 if (!films.length) {
+  // eslint-disable-next-line no-undef
   console.log('No film JSON files found.');
+  // eslint-disable-next-line no-undef
   process.exit(0);
 }
 
+// eslint-disable-next-line no-undef
 console.log('Title'.padEnd(45) + ' Key');
+// eslint-disable-next-line no-undef
 console.log('-'.repeat(55));
 for (const { title, key } of films) {
+  // eslint-disable-next-line no-undef
   console.log(title.padEnd(45) + ' ' + key);
 }

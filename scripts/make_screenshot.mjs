@@ -7,12 +7,15 @@
 
 import puppeteer from 'puppeteer';
 
+// eslint-disable-next-line no-undef
 let arg = process.argv[2] ?? 'standard';
 if (arg !== 'standard' && arg !== 'side') {
   arg = 'standard'
 }
 
+// eslint-disable-next-line no-undef
 console.log('Note usage: \n bun run make_screenshot [standard|side] (default: standard)');
+// eslint-disable-next-line no-undef
 console.log(`Generating screenshot for ${arg} view...`);
 
 const BASE   = 'http://localhost:3000/invite/';
@@ -28,4 +31,5 @@ await page.goto(URL, { waitUntil: 'networkidle0' });
 await page.screenshot({ path: OUTPUT, type: 'jpeg', quality: 90, fullPage: true });
 
 await browser.close();
+// eslint-disable-next-line no-undef
 console.log(`Wrote ${OUTPUT}`);

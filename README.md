@@ -75,6 +75,7 @@ To run: `bun run dev` or `bun run build`
 
 See `bun run deploy` to post to a public website via scp and ssh -- see `scripts/sitevars.sh`
 
+This project is a bit of a Frankenstein, as some options are configured through high-level scripts, but other things are better left to actual code/css, such as font changes.  Also, the idea that you need to install node, npm, a screen-grab-library, and ssh/scp to make a party invitation is a little out there, but this is all just for fun.
 
 ## Other options
 
