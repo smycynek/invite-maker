@@ -9,18 +9,18 @@ import puppeteer from 'puppeteer';
 
 // eslint-disable-next-line no-undef
 let arg = process.argv[2] ?? 'standard';
-if (arg !== 'standard' && arg !== 'side') {
+if (arg !== 'standard' && arg !== 'side' && arg !== 'banner') {
   arg = 'standard'
 }
 
 // eslint-disable-next-line no-undef
-console.log('Note usage: \n bun run make_screenshot [standard|side] (default: standard)');
+console.log('Note usage: \n bun run make_screenshot [standard|side|banner] (default: standard)');
 // eslint-disable-next-line no-undef
 console.log(`Generating screenshot for ${arg} view...`);
 
 const BASE   = 'http://localhost:3000/invite/';
-const URL    = arg === 'side' ? `${BASE}#/side` : BASE;
-const OUTPUT = 'invitation.jpg';
+const URL    = arg === 'side' ? `${BASE}#/side` : arg === 'banner' ? `${BASE}#/banner` : BASE;
+const OUTPUT = arg === 'banner' ? 'banner.jpg' : 'invitation.jpg';
 
 const browser = await puppeteer.launch();
 const page = await browser.newPage();
