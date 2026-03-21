@@ -1,3 +1,8 @@
+:root {
+  color-scheme: light dark;
+  color: #000000;
+  background-color: #242424;
+}
 /* Mobile styles (default) */
 .container {
   width: 100%; /* Full width on mobile */

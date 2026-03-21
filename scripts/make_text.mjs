@@ -15,19 +15,23 @@ const FILES = [
 
 for (const f of FILES) {
   if (!existsSync(f)) {
+    // eslint-disable-next-line no-undef
     console.error(`Error: ${f} not found (run from project root)`);
+    // eslint-disable-next-line no-undef
     process.exit(1);
   }
 }
 
-const g  = JSON.parse(readFileSync('src/res/general.json',   'utf8'));
-const dt = JSON.parse(readFileSync('src/res/date-time.json', 'utf8'));
-const f1 = JSON.parse(readFileSync('src/res/film1.json',     'utf8'));
-const f2 = JSON.parse(readFileSync('src/res/film2.json',     'utf8'));
+const g  = JSON.parse(readFileSync(FILES[0],   'utf8'));
+const dt = JSON.parse(readFileSync(FILES[1], 'utf8'));
+const f1 = JSON.parse(readFileSync(FILES[2],     'utf8'));
+const f2 = JSON.parse(readFileSync(FILES[3],     'utf8'));
 
 const hr = '---';
 
 const text = [
+  g.subject + ': ' + dt.date,
+  hr,
   g.title1,
   g.title2,
   g.title3,
@@ -57,7 +61,9 @@ const text = [
 ].join('\n') + '\n';
 
 writeFileSync('invite.txt', text, 'utf8');
+// eslint-disable-next-line no-undef
 console.log('Wrote invite.txt');
 
 await sharp('public/preview.png').resize(500).jpeg().toFile('invite.jpg');
+// eslint-disable-next-line no-undef
 console.log('Wrote invite.jpg');

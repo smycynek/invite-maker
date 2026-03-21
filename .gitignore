@@ -33,7 +33,7 @@ prep_myc.sh
 scripts/prep_myc.sh
 scripts/sitevars_myc.sh
 
-
+invitedata/general-steelmag.json
 
 # Runtime data
 pids
