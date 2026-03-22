@@ -8,7 +8,7 @@ Have you ever wanted a nice party invitation, but you don't like a lot of online
 I wanted a fun project for creating movie-night party invitations, since I host them three times a year, so I created this site builder to do just that.
 
 I needed:
-
+* Something that could build a static website to deploy to any host as well as generate image screenshots and plain text summaries.
 * Something that looked good on mobile and desktop.
 * Something that could be made into a single image/screenshot easily, so I could send a URL or an image as needed.
 * Something that could also render everything as plain text.
