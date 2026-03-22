@@ -6,6 +6,12 @@ USAGE="./deploy.sh <key1> <key2>"
 EXAMPLE="./deploy.sh wargames leap"
 SEE_ALSO="also see 'bun run list_films'"
 
+OVERRIDE=false
+if [ "$1" = "-o" ]; then
+    OVERRIDE=true
+    shift
+fi
+
 if [ ! -f "$VARS" ]; then
    echo "You must supply app environment variables in $VARS to deploy"
    exit 2
@@ -27,14 +33,16 @@ if [ -z "$FOLDER" ]; then
 fi
 
 
-if [ -z "$1" ]; then
-    printf "no film 1 key specified \n %s \n %s \n %s\n" "$USAGE" "$EXAMPLE" "$SEE_ALSO"
-    exit 4
-fi
+if [ "$OVERRIDE" = false ]; then
+    if [ -z "$1" ]; then
+        printf "no film 1 key specified \n %s \n %s \n %s\n" "$USAGE" "$EXAMPLE" "$SEE_ALSO"
+        exit 4
+    fi
 
-if [ -z "$2" ]; then
-    printf "no film 2 key specified \n %s \n %s \n %s\n" "$USAGE" "$EXAMPLE" "$SEE_ALSO"
-    exit 4
+    if [ -z "$2" ]; then
+        printf "no film 2 key specified \n %s \n %s \n %s\n" "$USAGE" "$EXAMPLE" "$SEE_ALSO"
+        exit 4
+    fi
 fi
 
 
@@ -49,7 +57,9 @@ for tool in "${tools[@]}"; do
     fi
 done
 
-./scripts/prep_resources.sh "$1" "$2"
+if [ "$OVERRIDE" = false ]; then
+    ./scripts/prep_resources.sh "$1" "$2"
+fi
 
 rm -rf dist # Remove old build
 rm -rf "$APP"
