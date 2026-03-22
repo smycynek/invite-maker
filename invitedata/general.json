@@ -11,5 +11,6 @@
   "kids": "Kids (Cinema 2, Downstairs)",
   "closing": "We hope to see you all there!",
   "helpYourself": "Help yourself to food and drink! Kids are downstairs with their own drinks and snacks.",
-  "website": "https://your-website.com/invite"
+  "website": "https://your-website.com",
+  "website_path": "invite"
 }
