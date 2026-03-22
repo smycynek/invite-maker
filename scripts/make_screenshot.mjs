@@ -6,6 +6,10 @@
 // Requires the dev server to be running (bun run dev)
 
 import puppeteer from 'puppeteer';
+import { readFileSync } from 'fs';
+
+// eslint-disable-next-line no-undef
+const { website_path } = JSON.parse(readFileSync('./invitedata/general.json', 'utf8'));
 
 // eslint-disable-next-line no-undef
 let arg = process.argv[2] ?? 'standard';
@@ -18,7 +22,7 @@ console.log('Note usage: \n bun run make_screenshot [standard|side|banner] (defa
 // eslint-disable-next-line no-undef
 console.log(`Generating screenshot for ${arg} view...`);
 
-const BASE   = 'http://localhost:3000/invite/';
+const BASE   = `http://localhost:3000/${website_path}/`;
 const URL    = arg === 'side' ? `${BASE}#/side` : arg === 'banner' ? `${BASE}#/banner` : BASE;
 const OUTPUT = arg === 'banner' ? 'banner.jpg' : 'invitation.jpg';
 
