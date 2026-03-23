@@ -4,7 +4,7 @@ VARS=./scripts/sitevars.sh # user-supplied vars for SITE, APP, and FOLDER
 
 USAGE="./deploy.sh <key1> <key2>"
 EXAMPLE="./deploy.sh wargames leap"
-SEE_ALSO="also see 'bun run list_films'"
+SEE_ALSO="also see 'npm run list_films'"
 
 OVERRIDE=false
 if [ "$1" = "-o" ]; then
@@ -65,7 +65,7 @@ rm -rf dist # Remove old build
 rm -rf "$APP"
 rm "$APP.zip"
 
-bun run build
+npm run build
 
 # rename output folder
 mv dist "$APP"
