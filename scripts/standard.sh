@@ -1,7 +1,7 @@
 #! /bin/bash
 
 if [ ! -f ./src/res/date-time.json ]; then
-  echo "Error: src/res/date-time.json not found. Please 'npm run prep_resources to prepare the data files."
+  echo "Error: src/res/date-time.json not found. Please 'npm run prep_resources' to prepare the data files."
   exit 1
 fi
 

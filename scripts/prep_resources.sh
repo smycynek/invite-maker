@@ -2,7 +2,7 @@
 
 USAGE="USAGE: ./prep_resources.sh <film1> <film2>"
 EXAMPLE="Example: ./prep_resources.sh burbs shrunk"
-SEE_ALSO="Also see 'bun run list_films'"
+SEE_ALSO="Also see 'npm run list_films'"
 
 if [ -z "$1" ]; then
     printf "no film1 %s \n %s \n %s\n" "$USAGE" "$EXAMPLE" "$SEE_ALSO"
@@ -25,5 +25,5 @@ cp ./filmdata/"$2".json ./src/res/film2.json
 cp ./invitedata/general.json ./src/res/general.json
 cp ./invitedata/date-time.json ./src/res/date-time.json
 
-bun run update_index
-bun run side_by_side
+npm run update_index
+npm run side_by_side
