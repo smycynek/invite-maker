@@ -37,7 +37,7 @@ Text message previews of the URL look great, too!
 
 ## Setup
 
-Built with Node v22, SolidJS, and Vite
+Built with Node v24, SolidJS, and Vite
 
 `npm install`
 
@@ -94,5 +94,9 @@ preview image.
 `invite/#/side` -- Shows a side-by side version of the invitation, better for some screens or screenshots.
 
 `invite/#/banner` -- Shows a simplified widescreen page suitable for showing on a TV.
+
+## Live demo
+https://stevenvictor.net/invite/#/
+
 The project compiles to older Ecmascript standards, as most TVs don't support a lot of modern HTML/JS.
 
