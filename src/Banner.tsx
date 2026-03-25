@@ -1,10 +1,11 @@
 import type { Component } from 'solid-js';
 import generalData from './res/general.json';
 import dateTimeData from './res/date-time.json';
-import film1Data from './res/film1.json';
 import film2Data from './res/film2.json';
 import './styles.css';
 const Banner: Component = () => {
+  const singleEvent = film2Data.title === '<EMPTY>';
+
   return (
     <div
       style={{
@@ -16,11 +17,7 @@ const Banner: Component = () => {
       }}
     >
       <h1 style={{ 'font-size': '5rem' }}>Welcome!</h1>
-      <img
-        src="preview.png"
-        width={film1Data.filename === film2Data.filename ? '28%' : '55%'}
-        alt="Movie Night Preview Banner"
-      />
+      <img src="preview.png" width={singleEvent ? '28%' : '55%'} alt="Movie Night Preview Banner" />
       <div>
         <h2>
           {generalData.food} : {dateTimeData.time1}

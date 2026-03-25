@@ -29,7 +29,7 @@ for (const p of [FILM1_JSON, FILM2_JSON]) {
 
 const film1 = JSON.parse(readFileSync(FILM1_JSON, 'utf8'));
 const film2 = JSON.parse(readFileSync(FILM2_JSON, 'utf8'));
-const sameFilm = JSON.stringify(film1) === JSON.stringify(film2);
+const singleEvent = film2.title === "<EMPTY>";
 
 const name1 = film1.filename;
 const path1 = join(PUBLIC_DIR, name1);
@@ -41,7 +41,7 @@ if (!existsSync(path1)) {
   process.exit(1);
 }
 
-if (sameFilm) {
+if (singleEvent) {
   // Single image with black border
   const meta1 = await sharp(path1).metadata();
   const finalW = Math.round(meta1.width * 1.0);
