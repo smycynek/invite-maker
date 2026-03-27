@@ -1,6 +1,6 @@
 #! /bin/bash
 
-USAGE="USAGE: ./prep_resources.sh <film1> <film2>"
+USAGE="USAGE: ./prep_resources.sh <film1> <optional film2>"
 EXAMPLE="Example: ./prep_resources.sh burbs shrunk"
 SEE_ALSO="Also see 'npm run list_films'"
 
