@@ -1,4 +1,3 @@
-
 #! /bin/bash
 
 rm -f invite.txt invite.jpg invite.zip invitation.jpg banner.jpg public/*.jpg public/preview.png 

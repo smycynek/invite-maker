@@ -5,7 +5,7 @@ import dateTimeData from './res/date-time.json';
 import film1Data from './res/film1.json';
 import film2Data from './res/film2.json';
 
-const sameFilm = JSON.stringify(film1Data) === JSON.stringify(film2Data);
+const singleEvent = film2Data.title === '<EMPTY>';
 
 const App: Component = () => {
   return (
@@ -31,7 +31,7 @@ const App: Component = () => {
         <p>{film1Data.desc}</p>
         <img class="poster" src={film1Data.filename} alt={film1Data.title} />
 
-        <Show when={!sameFilm}>
+        <Show when={!singleEvent}>
           <hr />
           <h4> {generalData.kids}</h4>
           <h1>{film2Data.title}</h1>

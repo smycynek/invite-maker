@@ -2,7 +2,7 @@
 
 VARS=./scripts/sitevars.sh # user-supplied vars for SITE, APP, and FOLDER
 
-USAGE="./deploy.sh <key1> <key2>"
+USAGE="./deploy.sh <key1> <optional key2>"
 EXAMPLE="./deploy.sh wargames leap"
 SEE_ALSO="also see 'npm run list_films'"
 

@@ -50,7 +50,7 @@ const text = [
   g.adults,
   f1.title,
   f1.desc,
-  ...(f1.title === f2.title ? [] : [
+  ...(f2.title === '<EMPTY>' ? [] : [
     hr,
     g.kids,
     f2.title,

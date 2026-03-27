@@ -6,9 +6,10 @@ Copyright Steven Mycynek 2026
 
 Have you ever wanted a nice party invitation, but you don't like a lot of online solutions that have advertisements, automatically prompt your guests to buy gifts, or require a subscription to avoid all that?  
 
-I wanted a fun project for creating movie-night party invitations, since I host them three times a year, so I created this site builder to do just that.
+I wanted a fun project for creating movie-night party invitations, since I host them often, so I created this site builder to do just that.
 
 I needed:
+
 * Something that could build a static website to deploy to any host as well as generate image screenshots and plain text
 * Something that looked good on mobile and desktop.
 * Something with easy customizable content
@@ -22,13 +23,9 @@ Rendered page
 
 ![Rendered website](./previews/example2.jpg)
 
-
-
 TV banner
 
 ![Rendered banner](./previews/tv.jpg)
-
-
 
 Text message previews of the URL look great, too!
 
@@ -50,7 +47,7 @@ You can also add/edit the images and film data in the `filmdata` directory
 
 (output...)
 
-```
+```text
 Title                                         Key
 -------------------------------------------------------
 AKEELAH AND THE BEE                           akeelah
@@ -62,12 +59,15 @@ HONEY, I SHRUNK THE KIDS                      shrunk
 ```
 
 (Choose two films)
+
 ```bash
-npm run prep_resources film1 film2
+npm run prep_resources film1 optional-film2
 
 e.g.
 
 npm run prep_resources burbs shrunk
+
+npm run prep_resources topgun
 ```
 
 `prep_resources` will copy image and text resources to a target directory and generate a preview image
@@ -81,10 +81,9 @@ This project is a bit of a Frankenstein, as some options are configured through 
 
 ## Other options
 
-1. Run `npm run make_text` to generate an optional plain text summary and small 
+1. Run `npm run make_text` to generate an optional plain text summary and small
 preview image.
 2. Run `npm run make_screenshot <standard | side | banner>` to create an image of the static site (site must be running locally already)
-
 
 ## Endpoints
 
@@ -95,7 +94,7 @@ preview image.
 `invite/#/banner` -- Shows a simplified widescreen page suitable for showing on a TV.
 
 ## Live demo
-https://stevenvictor.net/invite/#/
+
+<https://stevenvictor.net/invite/#/>
 
 The project compiles to older Ecmascript standards, as most TVs don't support a lot of modern HTML/JS.
-
