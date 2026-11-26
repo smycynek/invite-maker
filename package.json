@@ -15,6 +15,7 @@
     "side_by_side": "node scripts/side_by_side.mjs",
     "list_films": "node scripts/list_films.mjs",
     "make_text": "./scripts/standard.sh && node scripts/make_text.mjs",
+    "make_flyer": "node scripts/make_flyer.mjs",
     "make_screenshot": "./scripts/standard.sh && node scripts/make_screenshot.mjs",
     "clean": "./scripts/clean.sh",
     "prep_resources": "./scripts/prep_resources.sh",
